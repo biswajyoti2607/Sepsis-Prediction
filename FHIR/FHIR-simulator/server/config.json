@@ -1,0 +1,35 @@
+{
+	"port": 5000,
+    "files":[
+		{
+			"file_id" : "icustays",
+			"file_name" :"Data/ICUSTAYS.csv",
+			"file_index" : "intime"
+		},
+		{
+			"file_id" : "chartevents",
+			"file_name" :"Data/sample_chartevents_2.csv",
+			"file_index" : "charttime"
+		},
+		{
+			"file_id" : "inputevents",
+			"file_name" :"Data/sample_inputevents_mv_2.csv",
+			"file_index" : "endtime"
+		},
+		{
+			"file_id" : "labs",
+			"file_name" :"Data/sample_labs_with_loinc_codes_2.csv",
+			"file_index" : "charttime"
+		},
+		{
+			"file_id" : "ids",
+			"file_name" :"Data/sample_ids_2.csv",
+			"file_index" : "sepsist0"
+		},
+		{
+			"file_id" : "outputevents",
+			"file_name" :"Data/sample_outputevents_2.csv",
+			"file_index" : "charttime"
+		}
+    ]
+}

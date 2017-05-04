@@ -1,0 +1,8 @@
+{
+	"Base_URI" : "http://localhost:5000",
+    "resource":
+		{
+			"patient" : "subject"
+		},
+	"interval": 1
+}

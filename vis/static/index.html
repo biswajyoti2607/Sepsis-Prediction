@@ -1,0 +1,138 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Sepsis Prediction</title>
+  <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+  <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+  <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.17/d3.js" integrity="sha256-gfQwA6PlkZsLqWu4bU4hXPrbTqzixm0B5MdvBLI+Oas=" crossorigin="anonymous"></script>
+  <style>
+  html, body { 
+	height: 100%; 
+	padding: 0; 
+	margin: 0;
+	font-family: 'Open Sans', sans-serif;
+	font-size: 12px;
+  }
+  .axis text {
+    /* font: 10px sans-serif; */
+	font-size: 10px;
+  }
+  .chartTitle {
+    font-size: 12px;
+    font-weight: bold;
+    text-anchor: middle; 
+  }
+  .axis .title {
+    font-weight: bold;
+    text-anchor: middle;
+  }
+  .axis path,
+  .axis line {
+    fill: none;
+    stroke: #000;
+    shape-rendering: crispEdges;
+  }
+  .x.axis path {
+    fill: none;
+    stroke: #000;
+    shape-rendering: crispEdges;
+  }
+  .nav .area {
+    fill: lightgrey;
+    stroke-width: 0px;
+  }
+  .nav .line {
+    fill: none;
+    stroke: darkgrey;
+    stroke-width: 1px;
+  }
+  .viewport {
+    stroke: grey;
+    fill: black;
+    fill-opacity: 0.3;
+  }
+  .viewport .extent {
+    fill: green;
+  }
+  .chart-box {
+	width: 50%; 
+	height: 50%; 
+	float: left;
+  }
+	.ticks {
+	  font: 10px sans-serif;
+	}
+
+	.track,
+	.track-inset,
+	.track-overlay {
+	  stroke-linecap: round;
+	}
+
+	.track {
+	  stroke: #000;
+	  stroke-opacity: 0.3;
+	  stroke-width: 10px;
+	}
+
+	.track-inset {
+	  stroke: #ddd;
+	  stroke-width: 8px;
+	}
+
+	.track-overlay {
+	  pointer-events: stroke;
+	  stroke-width: 50px;
+	  stroke: transparent;
+	  cursor: pointer;
+	}
+
+	.handle {
+	  fill: #fff;
+	  stroke: #000;
+	  stroke-opacity: 0.5;
+	  stroke-width: 1.25px;
+	}
+	
+	.chart {
+		opacity: 1;
+		background-color: white;
+		border: 1px solid grey;
+		border-radius: 5px;
+		padding: 2px;
+	}
+	
+	/*
+	.chart div {
+	  font-size: 8px;
+	  background-color: steelblue;
+	  text-align: right;
+	  padding: 2px;
+	  margin: 1px;
+	  color: white;
+	}
+	*/
+	/*
+	.chart div span {
+	  font-size: 8px;
+	  background-color: white;
+	  text-align: right;
+	  padding: 2px;
+	  margin: 1px;
+	  color: black;
+	}
+	*/
+  </style>
+<body>
+
+<div class="chart-box" id="viewDiv1"></div>
+<div class="chart-box" id="viewDiv2"></div>
+<div class="chart-box" id="viewDiv3"></div>
+<div class="chart-box" id="viewDiv4"></div>
+
+<script src="api.js"></script>
+<script src="app.js"></script>

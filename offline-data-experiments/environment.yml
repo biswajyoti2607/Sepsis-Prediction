@@ -1,0 +1,9 @@
+name: streaming_sepsis
+dependencies:
+  - python=3.6
+  - numpy=1.12.*
+  - scipy=0.18.*
+  - pandas=0.19.*
+  - beautifulsoup4=4.5.*
+  - nltk=3.2.*
+  - jupyter=1.0.*
